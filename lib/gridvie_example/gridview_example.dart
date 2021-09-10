@@ -30,14 +30,32 @@ class _GridViewExampleState extends State<GridViewExample> {
               ),
               itemBuilder: (context, index) {
                 return GridTile(
-                  footer: Container(
-                    color: Colors.black12,
-                    height: 40.0,
-                  ),
                   child: Container(
                     color: phoneList[index].color,
-                    child: Image.asset(
-                        'assets/images/${phoneList[index].imgname}'),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Image.asset(
+                            'assets/images/${phoneList[index].imgname}',
+                            width: 150.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  footer: Container(
+                    alignment: Alignment.center,
+                    color: Colors.black12.withOpacity(0.5),
+                    height: 40.0,
+                    child: Text(
+                      phoneList[index].phoneName,
+                      // ignore: prefer_const_constructors
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 );
               }),
