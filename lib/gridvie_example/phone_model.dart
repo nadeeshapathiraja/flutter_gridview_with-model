@@ -5,12 +5,14 @@ class PhoneModel {
   String phoneName;
   Color color;
   String imgname;
+  bool isfav;
 
   PhoneModel({
     required this.id,
     required this.phoneName,
     required this.color,
     required this.imgname,
+    this.isfav = false,
   });
 }
 
