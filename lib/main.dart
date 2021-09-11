@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_project_2/example_test.dart';
 import 'package:task_project_2/gridvie_example/gridview_example.dart';
 import 'package:task_project_2/page_one.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const GridViewExample(),
+      home: const ExampleTest(),
     );
   }
 }
